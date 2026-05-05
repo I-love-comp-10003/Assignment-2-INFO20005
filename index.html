@@ -11,14 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-         <!-- Left aligned -->
+    <nav> <!-- not sure how to format this properly to allow users to navigate properly -->
         <ul class="leftAlign">
             <li><a href="index.html">Home</a></li>
             <li><a href="">Sale</a></li>
-            <li><a href="">Shop All</a></li>
+            <li>
+                <div class="dropdown">
+                    <a href="allProducts.html" class="dropbtn">Shop All</a><br>
+                    <aside class="dropdownContent">
+                            <a href="harnesses.html">Harnesses</a> <br>
+                            <a href="sweaters.html">Sweaters & Jumpers</a><br>
+                            <a href="">Bandanas</a><br>
+                            <a href="">Leashes</a><br>
+                            <a href="">Collars</a><br>
+                            <a href="">Waste Bag Holders</a><br>
+                            <a href="">Accessories</a><br>
+                            <a href="">For Hoomans</a><br>
+                    </aside>
+                </div>
+            </li>
 
-            <!-- Drop down in the Nav bar -->
             <li>
                 <div class="dropdown">
                     <a class="dropbtn">Collections</a><br>
@@ -39,13 +51,12 @@
             <li><a href="">Sizing Guide</a></li>
         </ul>
 
-        <!-- Centered -->
+
 
         <div class="center">
             <a><img src="image/logo.png" height="40px"></a>
         </div>
 
-        <!-- Right Aligned -->
 
         <div class="rightAlign">
             <span><a><img src="image/profile.svg" height="20px"></a></span>
@@ -54,14 +65,14 @@
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" >
         <img src="image/hero.webp" >
-        <div class="banner"> 
-            <div>
+        <div class="overlay"> 
+            <div class="banner">
                 <h1>truf & co.</h1>
                 <h2>Based in Melbourne, Australia</h2>
             </div>
-            <button>See all Products</button>
+            <button><a href="productListing.html">See All Products</a></button>
         </div>
         </div>
     </header>
@@ -99,4 +110,5 @@
         </div>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>

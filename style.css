@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Times New Roman", system-ui;
+    overflow-x: hidden
 }
 
 h1 {
@@ -10,12 +11,11 @@ h1 {
     font-style: normal;
 }
 
-/* Nav bar */
+                                                                    /* Nav bar */
 
 nav {
     height: 8%;
     width: 100%;
-    flex: content;
     display: grid;
     position: fixed;
     grid-template-columns:1fr 1fr 1fr;
@@ -27,7 +27,7 @@ nav {
 
 nav > ul{
     display: flex;
-    margin:0;
+    margin:0 5% 0 5%;
     padding:0;
     height: 100%;
     width: auto;
@@ -75,20 +75,43 @@ nav li{
     display: flex;
     justify-content: space-between;
 }
-/* Hero */
+                                                                  /* Hero */
 
 .hero{
-    background-color: aqua;
+    width: 100%;
+    height: 50%;
 }
+
 .hero img{
-    margin: auto;
+    margin: 0 20% 0 20%;
     display: flex;
     justify-content: center;
+    position: relative;
+    max-height: 1024px;
+    max-width: 60%;
+    height: auto;
+    width: 70%;
+    object-fit: cover;
+    z-index: 1;
 }
-.heroImg{   
-    height: 912px;
-}
-.banner {
-    margin: auto;
+.overlay {
     text-align: center;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 2;
+}
+.banner{
+    background-color: red;
+    padding: 1%;
+}
+
+.banner h1{
+    font-size: 100px;
+    text-align: center;
+    margin: 0;
+}
+.overlay button{
+    margin-top: 2%;
+    padding: .75% 1% .75% 1%;
 }
