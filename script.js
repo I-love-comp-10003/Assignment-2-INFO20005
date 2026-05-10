@@ -58,7 +58,7 @@ const productData = [
     image: ["image/halfZipSweater.webp", "image/halfZipSweater2.webp"],
     price: 54.95,
     collection: "",
-    productType: "Sweater",
+    productType: "harness",
     sale: false,
     salePrice: 0,
   },
@@ -67,7 +67,7 @@ const productData = [
     image: ["image/halfZipSweater.webp", "image/halfZipSweater2.webp"],
     price: 54.95,
     collection: "",
-    productType: "Sweater",
+    productType: "harness",
     sale: false,
     salePrice: 0,
   },
@@ -76,7 +76,7 @@ const productData = [
     image: ["image/halfZipSweater.webp", "image/halfZipSweater2.webp"],
     price: 54.95,
     collection: "",
-    productType: "Sweater",
+    productType: "harness",
     sale: false,
     salePrice: 0,
   },
@@ -85,7 +85,7 @@ const productData = [
     image: ["image/halfZipSweater.webp", "image/halfZipSweater2.webp"],
     price: 54.95,
     collection: "",
-    productType: "Sweater",
+    productType: "harness",
     sale: false,
     salePrice: 0,
   },
@@ -94,12 +94,12 @@ const productData = [
     image: ["image/halfZipSweater.webp", "image/halfZipSweater2.webp"],
     price: 54.95,
     collection: "",
-    productType: "Sweater",
+    productType: "harness",
     sale: true,
     salePrice: 43.96,
   },
 ];
-                                    //
+                                    // 
 function makeList(products) {
   const container = document.getElementById("products");
   if (!container) return;
@@ -141,6 +141,52 @@ function makeList(products) {
   });
 }
 
+const productStyle = [
+    {
+        name: "Harnesses",
+        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        type: "product",
+    },
+    {
+        name: "Sweaters & Jumpers",
+        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        type: "product",
+    },
+    {
+        name: "Bandanas",
+        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        type: "product",
+    },
+    {
+        name: "Leashes",
+        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        type: "product",
+    },
+    {
+        name: "Collars",
+        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        type: "product",
+    },
+    {
+        name: "Waste Bag Holders",
+        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        type: "product",
+    },
+    {
+        name: "Accessories",
+        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        type: "product",
+    },
+    {
+        name: "For Hoomans",
+        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        type: "product",
+    },
+]
+
+
 document.addEventListener("DOMContentLoaded", () => {
   makeList(productData);
 });
+
+

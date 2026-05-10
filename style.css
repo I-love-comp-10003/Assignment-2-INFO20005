@@ -1,17 +1,40 @@
+:root {
+  --polka-bg-image:
+    radial-gradient(#dfe0d7 19.6%, transparent 19.6%);
+  --polka-bg-position: 0px 0px, 40px 40px;
+  --polka-bg-size: 40px 40px;
+  --polka-bg-color: #D7D3C8;
+}
 body{
     margin: 0;
     padding: 0;
     font-family: "Times New Roman", system-ui;
-    overflow-x: hidden
+    overflow-x: hidden;
+    color: #4D483C;
+    background-image: var(--polka-bg-image);
+    background-position: var(--polka-bg-position);
+    background-size: var(--polka-bg-size);
+    background-color: var(--polka-bg-color);
+    
+}
+
+a {
+    text-decoration: none;
+    color: #4D483C;
 }
 
 h1 {
     font-family: "Aboreto", system-ui;
-    font-weight: 400;
+    font-weight: 100;
+    font-style: normal;
+}
+h2 {
+    font-family: "Playfair Display", system-ui;
+    font-weight: 100;
     font-style: normal;
 }
 
-                                                                    /* Nav bar */
+    /* Nav bar */
 
 nav {
     height: 8%;
@@ -21,7 +44,7 @@ nav {
     grid-template-columns:1fr 1fr 1fr;
     align-items: center;
     padding: 0;
-    z-index: 10;
+    z-index: 2;
     background-color: #F8F9F0;
 }
 
@@ -46,17 +69,16 @@ nav li{
 }
 
 .dropdownContent a{
-    margin: 5px;
+    margin: 10px;
     padding: 5px;
 }
 
-.dropdown:hover .dropdownContent, .dropdown:focus .dropdownContent {
-    display: inline;
-    transition: 0.5s;
-    background-color: rgb(232, 96, 96);
-    margin: 20px;
-    overflow: visible;
+.dropdown:hover .dropdownContent {
+    display: block;
     position: absolute;
+    background-color: #F8F9F0;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .leftAlign {
@@ -77,6 +99,10 @@ nav li{
 }
                                                                   /* Hero */
 
+.header {
+    background-color: #D7D3C8;
+}
+
 .hero{
     width: 100%;
     height: 50%;
@@ -92,18 +118,19 @@ nav li{
     height: auto;
     width: 70%;
     object-fit: cover;
-    z-index: 1;
+    z-index: 0;
 }
 .overlay {
     text-align: center;
     position: absolute;
     top: 50%;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
 }
 .banner{
-    background-color: red;
+    background-color: #F8F9F0;
     padding: 1%;
+    box-shadow: black 5px;
 }
 
 .banner h1{
@@ -114,4 +141,20 @@ nav li{
 .overlay button{
     margin-top: 2%;
     padding: .75% 1% .75% 1%;
+}
+
+.productCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+}
+.productCard img{
+    max-width: 200px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
 }
