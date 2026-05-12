@@ -1,6 +1,6 @@
 :root {
   --polka-bg-image:
-    radial-gradient(#dfe0d7 19.6%, transparent 19.6%);
+    radial-gradient(#dfe0d7 10.6%, transparent 5.6%);
   --polka-bg-position: 0px 0px, 40px 40px;
   --polka-bg-size: 40px 40px;
   --polka-bg-color: #D7D3C8;
@@ -37,15 +37,17 @@ h2 {
                                                                   /* Nav bar */
 
 nav {
-    height: 50px;
+    height: 6%;
     width: 100%;
     display: grid;
     position: fixed;
+    top: 0;
+    left: 0;
     grid-template-columns:1fr 1fr 1fr;
     align-items: center;
     padding: 0;
     z-index: 2;
-    background-color: #F8F9F0;
+    background-color: #f9faf0;
 }
 .leftAlign {
     justify-self: start;
@@ -128,7 +130,7 @@ nav li{
     z-index: 1;
 }
 .banner{
-    background-color: #F8F9F0;
+    background-color: #f9faf0;
     padding: 1%;
     box-shadow: black 5px;
 }
@@ -143,30 +145,46 @@ nav li{
     padding: .75% 1% .75% 1%;
 }
 
+                                                                  /* Product List Card */
+
 .productCard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
     justify-content: space-between;
     width: fit-content;
     height: fit-content;
     padding: 10px;
+    background-color: #D7D3C8 ;
+    margin: 0.5%;
 }
 .productCard img{
-    max-width: 200px;
-    width: auto;
-    height: auto;
+    width: 331px;
+    height: 441px;
     object-fit: cover;
 }
                                                                   /* Header */
-header {
-
+.header {
+    width: 100%;
+    height: 100%;
+    background-color: #4B634E;
+    padding: 10% 0;
+    margin: 3% 0;
 }
-                                                                  /* Hero */
+                                                                  /* Section */
 .productPage{
     background-color: #4D483C;
 }
-                                                                  /* Cards */
+.whiteBG {
+    background-color: #f9faf0;
+    --polka-bg-image:
+    radial-gradient(#D7D3C8  10.6%, transparent 5.6%);
+}
+#Collections {
+    text-align: center;
+    padding: 3% 0;
+}
+                                                                  /* Section cards */
 .productType {
     display: inline-flex;
     flex-wrap: wrap;
@@ -180,15 +198,14 @@ header {
 }
 .productSection img{
     width: 100%;
-    z-index: -1;
 }
 .productSection h2{
     width: 92%;
     background-color: #D7D3C8;
-    z-index: 1;
     position: relative;
     transform: translateY(-100%);
     padding: 4%;
+    margin: 0;
     text-align: right;
 }
 
@@ -204,15 +221,15 @@ header {
     max-height: 10%;
     width: 15%;
     margin: 0.5%;
-}
-.style article {
+    height: 270px;
 }
 .style .productSection img{
-    width: 100%;
-    z-index: -1;
+    width: 331px;
+    height: 441px;
 }
 .style .productSection h2{
     background-color: #4B634E;
     color: #D7D3C8;
     font-size: 100%;
 }
+

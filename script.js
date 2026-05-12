@@ -160,8 +160,9 @@ function makeList(products) {
     if (product.collection == container.className || product.productType == container.className) {
       anchor.append(img1, img2, title, price);
       if (product.sale) {
-        anchor.appendChild(saleBadge);
         anchor.appendChild(salePrice);
+        anchor.appendChild(saleBadge);
+        price.style = "text-decoration: line-through;"
       }
       productArticle.appendChild(anchor)
       container.appendChild(productArticle);
