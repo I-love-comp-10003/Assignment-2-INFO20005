@@ -34,10 +34,10 @@ h2 {
     font-style: normal;
 }
 
-    /* Nav bar */
+                                                                  /* Nav bar */
 
 nav {
-    height: 8%;
+    height: 50px;
     width: 100%;
     display: grid;
     position: fixed;
@@ -47,20 +47,37 @@ nav {
     z-index: 2;
     background-color: #F8F9F0;
 }
-
-nav > ul{
+.leftAlign {
+    justify-self: start;
+    width: 100%;
+    height: 50px;
     display: flex;
+    flex-direction: row;
+}
+
+.center {
+    justify-self: center;
+}
+
+.rightAlign {
+    justify-self: end;
+    width: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+nav > ul{
     margin:0 5% 0 5%;
     padding:0;
-    height: 100%;
-    width: auto;
     list-style-type: none;
 }
 
 nav li{
+    padding: 10px ;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 5px;
+    flex-shrink: 0;
     height:fit-content;
 }
 
@@ -79,23 +96,6 @@ nav li{
     background-color: #F8F9F0;
     padding: 10px;
     border-radius: 5px;
-}
-
-.leftAlign {
-    justify-self: start;
-}
-
-.center {
-    justify-self: center;
-}
-
-.rightAlign {
-    justify-self: end;
-    width: 150px;
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    justify-content: space-between;
 }
                                                                   /* Hero */
 
@@ -157,4 +157,62 @@ nav li{
     width: auto;
     height: auto;
     object-fit: cover;
+}
+                                                                  /* Header */
+header {
+
+}
+                                                                  /* Hero */
+.productPage{
+    background-color: #4D483C;
+}
+                                                                  /* Cards */
+.productType {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productSection {
+    width: 23%;
+    margin: 0.5%;
+    height: fit-content;
+}
+.productSection img{
+    width: 100%;
+    z-index: -1;
+}
+.productSection h2{
+    width: 92%;
+    background-color: #D7D3C8;
+    z-index: 1;
+    position: relative;
+    transform: translateY(-100%);
+    padding: 4%;
+    text-align: right;
+}
+
+.style {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    margin: 0 15%;
+}
+.style .productSection {
+    min-width: 200px;
+    max-height: 10%;
+    width: 15%;
+    margin: 0.5%;
+}
+.style article {
+}
+.style .productSection img{
+    width: 100%;
+    z-index: -1;
+}
+.style .productSection h2{
+    background-color: #4B634E;
+    color: #D7D3C8;
+    font-size: 100%;
 }
