@@ -35,10 +35,10 @@ const productData = [
     name: "Bonheur Turtleneck Sweater",
     image: ["image/bonheurSweater.jpg", "image/bonheurSweater2.jpg"],
     price: 44.95,
-    collection: "",
+    collection: "Bonheur",
     productType: "Sweater",
-    sale: false,
-    salePrice: 0,
+    sale: true,
+    salePrice: 34.95,
     href: "bonheurSweater.html",
   },
   {
@@ -113,7 +113,7 @@ const productData = [
   },
 ];
 
-// 
+// product info cards
 
 function makeList(products) {
   const container = document.getElementById("products");
@@ -131,14 +131,12 @@ function makeList(products) {
     const img1 = document.createElement("img");
     img1.src = product.image[0];
     img1.alt = product.name;
-    img1.className = "productImage";
-    img1.id = "imageA"
+    img1.className = "productImage imageA"
 
     const img2 = document.createElement("img");
     img2.src = product.image[1];
     img2.alt = product.name;
-    img2.className = "productImage";
-    img2.id = "imageB"
+    img2.className = "productImage imageB";
     img2.style = "display: none;"
 
     const title = document.createElement("h4");
@@ -300,18 +298,20 @@ function makeSection(productStyle) {
     const img1 = document.createElement("img");
     img1.src = product.image[0];
     img1.alt = product.name;
-    img1.className = "sectionImage";
-    img1.id = "imageA"
+    img1.className = "sectionImage imageA"
 
     const img2 = document.createElement("img");
     img2.src = product.image[1];
     img2.alt = product.name;
-    img2.className = "sectionImage";
-    img2.id = "imageB"
+    img2.className = "sectionImage imageB";
     img2.style = "display: none;"
 
     const title = document.createElement("h2");
     title.textContent = product.name;
+
+    const span = document.createElement("span")
+    span.textContent = ""
+    span.className = "cardLabel"
 
 
     if (product.type == container.className) {
@@ -322,6 +322,34 @@ function makeSection(productStyle) {
   });
 }
 
+let cart = [];
+
+function addToCart(productId, productName, productPrice) {
+    const cartItem = cart.find(item => item.id === productId);
+
+    if (cartItem) {
+        cartItem.quantity++;
+    } else {
+        cart.push({
+            id: productId,
+            name: productName,
+            price: parseFloat(productPrice),
+            quantity: 1
+        })
+    }
+}
+
+
+// quantity button
+function addProduct(n) {
+  const number = document.getElementById("value")
+  const value = parseFloat(number.textContent)
+  const change = value + n
+  number.textContent = change
+  if (change <= 0){
+    number.textContent = 1
+  }
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {

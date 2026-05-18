@@ -85,6 +85,7 @@ nav li{
 
 .dropdownContent {
     display: none;
+    background-color: #F8F9F0;
 }
 
 .dropdownContent a{
@@ -95,15 +96,21 @@ nav li{
 .dropdown:hover .dropdownContent {
     display: block;
     position: absolute;
-    background-color: #F8F9F0;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 2px;
+}
+.productPageNav {
+    background-color: #CEC5B5;
+}
+.productPageNav .dropdownContent{
+    background-color: #CEC5B5;
+}
+.productNav {
+    background-color: #F8F9F0;
 }
                                                                   /* Hero */
 
-.header {
-    background-color: #D7D3C8;
-}
+
 
 .hero{
     width: 100%;
@@ -163,17 +170,37 @@ nav li{
     height: 441px;
     object-fit: cover;
 }
-                                                                  /* Header */
-.header {
+                                                                  /* Headers */
+.wrapper {
     width: 100%;
     height: 100%;
     background-color: #4B634E;
     padding: 10% 0;
-    margin: 3% 0;
+    margin: 3% 0 0;
+}
+.titleHeading {
+    background-color: #D7D3C8;
+    margin: 0;
+    padding: 1% 0;
+    text-align: center;
+}
+.titleHeading h1{
+    margin: 0;
+}
+.stickyFilter {
+    background-color: #F8F9F0;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+.stickyFilter p{
+    margin: 0 5%;  
 }
                                                                   /* Section */
 .productPage{
     background-color: #4D483C;
+    --polka-bg-image:
+    radial-gradient(#9C9993  10.6%, transparent 5.6%)
 }
 .whiteBG {
     background-color: #f9faf0;
@@ -224,12 +251,13 @@ nav li{
     height: 270px;
 }
 .style .productSection img{
-    width: 331px;
-    height: 441px;
+    width: 100%;
+    transition: .5s ease-in;
 }
 .style .productSection h2{
     background-color: #4B634E;
     color: #D7D3C8;
     font-size: 100%;
 }
+
 
