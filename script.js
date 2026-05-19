@@ -67,7 +67,7 @@ const productData = [
     price: 54.95,
     collection: "",
     productType: "harness",
-    sale: false,
+    sale: true,
     salePrice: 0,
     href: "",
   },
@@ -128,6 +128,9 @@ function makeList(products) {
     const anchor = document.createElement("a")
     anchor.href = product.href;
 
+    const text = document.createElement("div")
+    text.className = "productText"
+
     const img1 = document.createElement("img");
     img1.src = product.image[0];
     img1.alt = product.name;
@@ -156,13 +159,21 @@ function makeList(products) {
 
 
     if (product.collection == container.className || product.productType == container.className) {
-      anchor.append(img1, img2, title, price);
+      text.append(title, price);
       if (product.sale) {
-        anchor.appendChild(salePrice);
-        anchor.appendChild(saleBadge);
+        if(product.salePrice != 0){
+          text.appendChild(salePrice);
+          text.appendChild(saleBadge);
+        } else {
+          saleBadge.textContent = ("Off Sale")
+          saleBadge.className = ("offSale")
+          text.appendChild(saleBadge);
+        }
         price.style = "text-decoration: line-through;"
       }
-      productArticle.appendChild(anchor)
+      
+      anchor.append(img1, img2, text);
+      productArticle.appendChild(anchor);
       container.appendChild(productArticle);
     }
   });
@@ -322,24 +333,6 @@ function makeSection(productStyle) {
   });
 }
 
-let cart = [];
-
-function addToCart(productId, productName, productPrice) {
-    const cartItem = cart.find(item => item.id === productId);
-
-    if (cartItem) {
-        cartItem.quantity++;
-    } else {
-        cart.push({
-            id: productId,
-            name: productName,
-            price: parseFloat(productPrice),
-            quantity: 1
-        })
-    }
-}
-
-
 // quantity button
 function addProduct(n) {
   const number = document.getElementById("value")
@@ -350,6 +343,29 @@ function addProduct(n) {
     number.textContent = 1
   }
 }
+
+let cart = [];
+
+function addToCart(productId, productName, productPrice) {
+    const cartItem = cart.find(item => item.id === productId);
+    const number = document.getElementById("value")
+    const value = parseFloat(number.textContent)
+
+    if (cartItem) {
+        cartItem.quantity += value;
+    } else {
+        cart.push({
+            id: productId,
+            name: productName,
+            price: parseFloat(productPrice),
+            quantity: value
+        })
+    }
+    console.log(cart)
+}
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {

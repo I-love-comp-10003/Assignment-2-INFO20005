@@ -14,8 +14,11 @@ body{
     background-image: var(--polka-bg-image);
     background-position: var(--polka-bg-position);
     background-size: var(--polka-bg-size);
-    background-color: var(--polka-bg-color);
-    
+    background-color: var(--polka-bg-color);    
+}
+
+main{
+    margin: 6% 0;
 }
 
 a {
@@ -159,42 +162,79 @@ nav li{
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-between;
-    width: fit-content;
-    height: fit-content;
-    padding: 10px;
-    background-color: #D7D3C8 ;
-    margin: 0.5%;
+    width: 267px;
+    height: 369px;
+    margin: 1.2% 0.5%;
 }
 .productCard img{
-    width: 331px;
-    height: 441px;
+    width: 267px;
+    height: 306px;
     object-fit: cover;
+}
+.productText {
+    z-index: 2;
+    background-color: #D7D3C8;
+    padding: 4%;
+    padding-bottom: 0;
+    height: 64px;
+}
+.productText p, .productText span{
+    margin: 0 2% 0 2%;
+    display: flex;
+    float: left;
+}
+.productText h4 {
+    margin: 1%;
+}
+.saleBadge {
+    background-color: #4B634E;
+    color: #D7D3C8;
+    padding: 0 7%;
+    margin-left: 2%;
+    border-radius: 25px;
+}
+.offSale {
+    background-color: #4D483C;
+    color: #D7D3C8;
+    padding: 0 7%;
+    border-radius: 25px;
 }
                                                                   /* Headers */
 .wrapper {
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: #4B634E;
-    padding: 10% 0;
-    margin: 3% 0 0;
 }
+
+.wrapper img {
+    margin: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 750px;
+}
+
 .titleHeading {
     background-color: #D7D3C8;
     margin: 0;
     padding: 1% 0;
     text-align: center;
+    border-bottom: black 1px solid;
 }
 .titleHeading h1{
     margin: 0;
 }
-.stickyFilter {
+.Filter {
     background-color: #F8F9F0;
     display: flex;
     justify-content: space-between;
-    padding: 2%;
+    padding: 1.5%;
 }
-.stickyFilter p{
+.Filter p{
     margin: 0 5%;  
+}
+.stickyTitle {
+    position: sticky;
+    top: 50px;
 }
                                                                   /* Section */
 .productPage{
@@ -219,9 +259,9 @@ nav li{
 }
 
 .productSection {
-    width: 23%;
-    margin: 0.5%;
-    height: fit-content;
+    margin: 2% 0.5%;
+    width: 334px;
+    height: 373px;
 }
 .productSection img{
     width: 100%;
@@ -244,11 +284,10 @@ nav li{
     margin: 0 15%;
 }
 .style .productSection {
-    min-width: 200px;
     max-height: 10%;
-    width: 15%;
-    margin: 0.5%;
-    height: 270px;
+    width: 194px;
+    margin: 2.3% 0.5%;
+    height: 217px;
 }
 .style .productSection img{
     width: 100%;
@@ -260,4 +299,145 @@ nav li{
     font-size: 100%;
 }
 
+
+
+                                                                  /* product page */
+.productInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1% 4% 0 4%;
+    color: #515F59;
+}
+.productListing {
+    background-color: #F8F9F0;
+    --polka-bg-image:transparent;
+}
+.productListing .wrapper {
+    height: 756px;
+}
+.productInfo h2 {
+    margin: 0;
+    font-size: 64px;
+}
+.productInfo .productPrice {
+    margin: 0 0 9% 0;
+    font-family: "helvetica";
+    font-weight: bold;
+    font-size: 32px;
+}
+.productDetails h4{
+    margin: 1% 0 0 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+.tableHeadings th{
+    text-align:left;
+    padding-bottom: 1%;
+    font-size: 24px
+}
+.tableHeadings button{
+    background: unset; 
+    border: 0;
+    text-align:left;
+    padding-bottom: 1%;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #4B634E;
+}
+.tableData th, .tableData td{
+ width: 50%;   
+}
+.productDetails table {
+    width: 100%;
+}
+
+
+
+#quantity {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    text-align: center;
+    width: 50%;
+    border: #4B634E 2px solid;
+    border-radius: 5px;
+}
+
+#quantity button{
+    background: unset; 
+    border: 0;
+    padding: 2%;
+}
+.addToCart button{
+    margin-top: 6%;
+    background: #CEC5B5; 
+    border: 0;
+    width: 200%;
+    height: 50px;
+}
+
+.tableButtons input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.tableButtons label{
+    
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+.tableButtons label input:checked ~ .checkmark {
+  background-color: #515F59;
+  color: #D7D3C8;
+}
+.size span {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    background-color: unset;
+    color: #515F59;
+    border: #515F59 solid 1px;
+    border-radius: 5px;
+}
+.size p{
+    transform: translateY(-10px);
+}
+.colourSelect span{
+    display: flex;
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: #4D483C solid 1px;
+    margin-right: 20px;
+    margin-bottom: 10%;
+}
+.colourSelect p{
+    margin:auto;
+}
+
+.productDetails summary{
+    width: 100%;
+    font-size: 20px;
+    font-family: "Aboreto", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    padding: 3% 0;
+    border-top: #4D483C solid 2px;
+}
+.productDetails summary::marker {
+  content: "";
+}
+
+
+.productDetails details p{
+    margin-left: 2%;
+    margin-top: -2%;
+}
 
