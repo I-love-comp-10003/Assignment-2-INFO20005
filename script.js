@@ -362,6 +362,8 @@ function addToCart(productId, productName, productPrice) {
         })
     }
     console.log(cart)
+    sessionStorage.setItem("id", productId);
+    sessionStorage.setItem("name", productName);
 }
 
 

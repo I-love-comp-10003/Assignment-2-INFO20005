@@ -332,7 +332,7 @@ nav li{
 }
 .tableHeadings th{
     text-align:left;
-    padding-bottom: 1%;
+    padding-bottom: 2%;
     font-size: 24px
 }
 .tableHeadings button{
@@ -420,6 +420,13 @@ nav li{
 }
 .colourSelect p{
     margin:auto;
+}
+
+.tableButtons label input:checked ~ #selectBeige {
+  background-color: #F0D2C8;
+}
+.tableButtons label input:checked ~ #selectGrey {
+  background-color: #CCCACA;
 }
 
 .productDetails summary{
