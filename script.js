@@ -344,30 +344,45 @@ function addProduct(n) {
   }
 }
 
+// add to cart
+
 let cart = [];
 
-function addToCart(productId, productName, productPrice) {
-    const cartItem = cart.find(item => item.id === productId);
+function addToCart(productId) {
+    localStorage.setItem(productId, JSON.stringify(cart));
     const number = document.getElementById("value")
-    const value = parseFloat(number.textContent)
-
-    if (cartItem) {
-        cartItem.quantity += value;
-    } else {
-        cart.push({
+    const color = document.querySelector('input.color:checked').value
+    const size = document.querySelector('input.size:checked').value
+    const value = parseFloat(number.textContent) 
+    const y = localStorage.getItem(productId);
+    const x = JSON.parse(y)
+    const z = x[productId].id;
+    
+        if (z === productId) {
+        x[0].amt += value
+        console.log(cart)
+      } else cart.push({
             id: productId,
-            name: productName,
-            price: parseFloat(productPrice),
-            quantity: value
+            size: size,
+            style: color,
+            amt: value,
         })
-    }
+        
     console.log(cart)
-    sessionStorage.setItem("id", productId);
-    sessionStorage.setItem("name", productName);
+    
+    localStorage.setItem(productId, JSON.stringify(cart));
+    console.log(localStorage)
 }
 
 
+function removeFromCart(productId) {
+  const findId = localStorage.removeItem(productId);
+}
 
+// your cart page
+function makeCart(){
+  const getItems = a
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -367,6 +367,7 @@ nav li{
     background: unset; 
     border: 0;
     padding: 2%;
+    cursor:pointer;
 }
 .addToCart button{
     margin-top: 6%;
@@ -374,6 +375,7 @@ nav li{
     border: 0;
     width: 200%;
     height: 50px;
+    cursor:pointer;
 }
 
 .tableButtons input {
@@ -437,6 +439,7 @@ nav li{
     font-style: normal;
     padding: 3% 0;
     border-top: #4D483C solid 2px;
+    cursor:pointer;
 }
 .productDetails summary::marker {
   content: "";

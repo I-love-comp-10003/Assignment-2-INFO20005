@@ -70,24 +70,24 @@
         <main class="productInfo" id="bonheurSweater">
          <div class="productDetails">
             <h4>truf & co</h4>
-            <h2 class="productTitle">Bonheur Turtleneck Sweater</h2>
-            <p class="productPrice"><span style="text-decoration: line-through; opacity: 80%; margin-right: 4%;">$44.95</span>  $34.95 <span class="saleBadge">Sale</span> </p> 
+            <h2 id="productTitle">Bonheur Turtleneck Sweater</h2>
+            <p class="productPrice"><span style="text-decoration: line-through; opacity: 80%; margin-right: 4%;">$44.95</span> <span id="productPrice"> $34.95 </span><span class="saleBadge">Sale</span> </p> 
             
             <table class="tableData">
                 <tr class="tableHeadings">
                     <th>Colour</th>
                 </tr>
                 <tr>
-                    <td class="tableButtons" id="colourSelect   ">
+                    <td class="tableButtons" id="colourSelect">
                         <label class="colourSelect" id="beige" for="beigeColor">
-                            <input type="radio" id="beigeColor" name="color" value="beigeColor">
+                            <input type="radio" id="beigeColor" name="color" value="beige" class="color">
                             <span  id="selectBeige">
                                 <p>Beige</p>
                             </span>
                         </label>
                        
                         <label class="colourSelect" id="grey" for="greyColor">
-                            <input type="radio" id="greyColor" name="color" value="greyColor">
+                            <input type="radio" id="greyColor" name="color" value="grey" class="color">
                             <span  id="selectGrey">
                                 <p>Grey</p>
                             </span>
@@ -103,27 +103,27 @@
                     <td class="size"> 
                         
                         <label for="XS">
-                            <input type="radio" id="XS" name="size" value="XS">
+                            <input type="radio" id="XS" name="size" value="XS" class="size">
                             <span class="checkmark">
                                 <p>XS</p>
                             </span>
                         </label>
                        
                         <label for="S">
-                             <input type="radio" id="S" name="size" value="S">
+                             <input type="radio" id="S" name="size" value="S" class="size">
                                 <span class="checkmark">
                                     <p>S</p>
                                 </span>
                             </label>
                         <label for="M">
-                            <input type="radio" id="M" name="size" value="M">
+                            <input type="radio" id="M" name="size" value="M" class="size">
                             <span class="checkmark">
                                 <p>M</p>
                             </span>
                         </label>
                         
                         <label for="L">
-                            <input type="radio" id="L" name="size" value="L">
+                            <input type="radio" id="L" name="size" value="L" class="size">
                             <span class="checkmark">
                                 <p>L</p>
                             </span>
@@ -132,7 +132,7 @@
                 </tr>
                 <tr>
                     <th class="addToCart">
-                    <button class="cartButton"onclick="addToCart(`bonheurSweater`,`Bonheur Turtleneck Sweater`, `34.95` )"> Add to Cart</button>
+                    <button class="cartButton" onclick="addToCart(`bonheurSweater`,`Bonheur Turtleneck Sweater`, `34.95`)"> Add to Cart</button>
                     </th>
                 </tr>
             </table>
