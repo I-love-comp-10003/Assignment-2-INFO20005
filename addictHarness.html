@@ -69,7 +69,7 @@
     </div>
     <main class="productInfo" id="addictHarness">
 
-        
+        <span style="display: none;"><input checked type="radio" class="color" value=""></span>
         <div class="productDetails">
             <h4>truf & co</h4>
             <h2 class="productTitle">The Addict Harness</h2>
@@ -84,27 +84,27 @@
                     <td class="size"> 
                         
                         <label for="XS">
-                            <input type="radio" id="XS" name="size" value="XS">
+                            <input type="radio" id="XS" name="size" value="XS" class="size">
                             <span class="checkmark">
                                 <p>XS</p>
                             </span>
                         </label>
                        
                         <label for="S">
-                             <input type="radio" id="S" name="size" value="S">
+                             <input type="radio" id="S" name="size" value="S" class="size">
                                 <span class="checkmark">
                                     <p>S</p>
                                 </span>
                             </label>
                         <label for="M">
-                            <input type="radio" id="M" name="size" value="M">
+                            <input type="radio" id="M" name="size" value="M" class="size">
                             <span class="checkmark">
                                 <p>M</p>
                             </span>
                         </label>
                         
                         <label for="L">
-                            <input type="radio" id="L" name="size" value="L">
+                            <input type="radio" id="L" name="size" value="L" class="size">
                             <span class="checkmark">
                                 <p>L</p>
                             </span>
@@ -113,7 +113,7 @@
                 </tr>
                 <tr>
                     <th class="addToCart">
-                    <button class="cartButton"onclick="addToCart(`addictHarness`,`The Addict Harness`, `64.95` )"> Add to Cart</button>
+                    <button class="cartButton"onclick="addToCart(`addictHarness`)"> Add to Cart</button>
                     </th>
                 </tr>
             </table>

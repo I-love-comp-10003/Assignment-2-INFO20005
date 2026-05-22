@@ -2,6 +2,7 @@
 
 const productData = [
   {
+    id: "addictHarness",
     name: "The Addict Harness",
     image: ["image/addictHarness.webp", "image/addictHarness2.webp"],
     price: 64.95,
@@ -12,6 +13,7 @@ const productData = [
     href: "addictHarness.html",
   },
   {
+    id: "",
     name: "The Addict Waste Bag Holder",
     image: ["image/addictWasteBag.webp", "image/addictWasteBag2.webp"],
     price: 29.95,
@@ -22,6 +24,7 @@ const productData = [
     href: "",
   },
   {
+    id: "",
     name: "The Addict Leash",
     image: ["image/addictLeash.webp", "image/addictLeash2.webp"],
     price: 49.95,
@@ -32,6 +35,7 @@ const productData = [
     href: "",
   },
   {
+    id: "bonheurSweater",
     name: "Bonheur Turtleneck Sweater",
     image: ["image/bonheurSweater.jpg", "image/bonheurSweater2.jpg"],
     price: 44.95,
@@ -42,6 +46,7 @@ const productData = [
     href: "bonheurSweater.html",
   },
   {
+    id: "",
     name: "Boucle Sweater",
     image: ["image/boucleTurtleneckSweater.jpg", "image/boucleTurtleneckSweater2.jpg"],
     price: 54.95,
@@ -52,6 +57,7 @@ const productData = [
     href: "",
   },
   {
+    id: "",
     name: "Half Zip Sweater",
     image: ["image/halfZipJumper.jpg", "image/halfZipJumper2.webp"],
     price: 54.95,
@@ -62,6 +68,7 @@ const productData = [
     href: "",
   },
   {
+    id: "",
     name: "The Dreamer's Harness",
     image: ["image/theDreamers1.jpg", "image/theDreamers2.webp"],
     price: 54.95,
@@ -72,6 +79,7 @@ const productData = [
     href: "",
   },
   {
+    id: "",
     name: "Lovers' Picnic",
     image: ["image/loversPicnic1.webp", "image/loversPicnic2.webp"],
     price: 54.95,
@@ -82,6 +90,7 @@ const productData = [
     href: "",
   },
   {
+    id: "",
     name: "Half Zip Sweater",
     image: ["image/halfZipJumper.jpg", "image/halfZipJumper2.webp"],
     price: 54.95,
@@ -92,6 +101,7 @@ const productData = [
     href: "",
   },
   {
+    id: "",
     name: "Half Zip Sweater",
     image: ["image/halfZipJumper.jpg", "image/halfZipJumper2.webp"],
     price: 54.95,
@@ -102,6 +112,7 @@ const productData = [
     href: "",
   },
   {
+    id: "",
     name: "Half Zip Sweater",
     image: ["image/halfZipJumper.jpg", "image/halfZipJumper2.webp"],
     price: 54.95,
@@ -346,48 +357,92 @@ function addProduct(n) {
 
 // add to cart
 
-let cart = [];
+let cart = []
+// first merges the cart in local storage to current array
 
 function addToCart(productId) {
-    localStorage.setItem(productId, JSON.stringify(cart));
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+   
     const number = document.getElementById("value")
-    const color = document.querySelector('input.color:checked').value
-    const size = document.querySelector('input.size:checked').value
-    const value = parseFloat(number.textContent) 
-    const y = localStorage.getItem(productId);
-    const x = JSON.parse(y)
-    const z = x[productId].id;
-    
-        if (z === productId) {
-        x[0].amt += value
-        console.log(cart)
+    const color = document.querySelector('input.color:checked').value 
+    const size = document.querySelector('input.size:checked').value 
+    const quantity = parseFloat(number.textContent)
+
+     
+    const product = productData.find(p => p.id === productId);
+    const cartDuplicate = cart.find(item => item.id === productId &&
+        item.size === size &&
+        item.style === color
+    );
+
+        if (cartDuplicate) {
+
+        cartDuplicate.amt += quantity
+        
       } else cart.push({
             id: productId,
+            name: product.name,
+            image: product.image[0],
             size: size,
             style: color,
-            amt: value,
+            amt: quantity,
+            collection: product.collection,
+            productType: product.productType,
+            price: product.sale 
+              ? product.salePrice
+              : product.price,
         })
         
-    console.log(cart)
     
-    localStorage.setItem(productId, JSON.stringify(cart));
-    console.log(localStorage)
-}
+    // puts into localstorage under the productId name
+    localStorage.setItem("cart", JSON.stringify(cart));
+    console.log(cart)
+};
+
+
+
 
 
 function removeFromCart(productId) {
-  const findId = localStorage.removeItem(productId);
-}
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart = cart.filter(item => item.id !== productId);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    location.reload();
+};
 
 // your cart page
-function makeCart(){
-  const getItems = a
-}
+
+
+function makeCart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartContainer = document.getElementById("cart");
+  if (!cartContainer) return;
+
+  cart.forEach(item => {
+
+    const card = document.createElement("article");
+    card.className = "cartCard";
+
+    card.innerHTML = `
+        <img src="${item.image}">
+
+        <div class="cartInfo">
+            <h2>${item.name}</h2>
+            <p>Size: ${item.size}</p>
+            <p>Colour: ${item.style}</p>
+            <p>Quantity: ${item.amt}</p>
+            <p>$${item.price}</p>
+        </div>
+    `;
+
+    cartContainer.append(card);
+});
+};
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  makeList(productData);
-  makeSection(productStyle);
+
+  makeCart()
 });
 
 
