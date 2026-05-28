@@ -14,10 +14,10 @@
 <body>
     <nav>
         <ul class="leftAlign">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">Sale</a></li>
-            <li>
-                <div class="dropdown">
+            <li class="desktop"><a href="index.html">Home</a></li>
+            <li class="desktop"><a href="">Sale</a></li>
+            <li class="desktop">
+                <div class="dropdown desktop">
                     <a href="allProducts.html" class="dropbtn">Shop All</a><br>
                     <aside class="dropdownContent">
                             <br><a href="harnessProductListing.html">Harnesses</a> <br><br>
@@ -29,10 +29,12 @@
                             <a href="">Accessories</a><br><br>
                             <a href="">For Hoomans</a><br>
                     </aside>
+
+                    
                 </div>
             </li>
 
-            <li>
+            <li class="desktop">
                 <div class="dropdown">
                     <a class="dropbtn">Collections</a><br>
                     <aside class="dropdownContent">
@@ -49,13 +51,18 @@
                     </aside>
                 </div>    
             </li>
-            <li><a href="">Sizing Guide</a></li>
+            <li class="desktop"><a href="">Sizing Guide</a></li>
+
+            <li><div class="mobile">
+            <a><img src="image/truflogo1Vectorized.png" height="40px"></a>
+            </li>
+        </div>
         </ul>
 
 
 
         <div class="center">
-            <a><img src="image/truflogo1Vectorized.png" height="40px"></a>
+            <a class="desktop"><img src="image/truflogo1Vectorized.png" height="40px"></a>
         </div>
 
 
@@ -63,6 +70,7 @@
             <span><a><img src="image/profile.svg" height="20px"></a></span>
             <span><a href="cart.html"> <img src="image/shoppingBag.svg"height="20px"> </a></span>
             <span><a> <img src="image/search.svg"height="20px"> </a></span>
+            <span class="mobile"><a> <img src="image/hamburger.svg"height="20px"> </a></span>
         </div>
     </nav>
 

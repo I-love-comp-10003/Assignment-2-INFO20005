@@ -151,7 +151,6 @@ function makeList(products) {
     img2.src = product.image[1];
     img2.alt = product.name;
     img2.className = "productImage imageB";
-    img2.style = "display: none;"
 
     const title = document.createElement("h4");
     title.textContent = product.name;
@@ -326,7 +325,6 @@ function makeSection(productStyle) {
     img2.src = product.image[1];
     img2.alt = product.name;
     img2.className = "sectionImage imageB";
-    img2.style = "display: none;"
 
     const title = document.createElement("h2");
     title.textContent = product.name;
@@ -368,7 +366,7 @@ function addToCart(productId) {
     const size = document.querySelector('input.size:checked').value 
     const quantity = parseFloat(number.textContent)
 
-     
+     //checks for products already in cart 
     const product = productData.find(p => p.id === productId);
     const cartDuplicate = cart.find(item => item.id === productId &&
         item.size === size &&
@@ -394,7 +392,7 @@ function addToCart(productId) {
         })
         
     
-    // puts into localstorage under the productId name
+    // puts into localstorage
     localStorage.setItem("cart", JSON.stringify(cart));
     console.log(cart)
 };
@@ -412,37 +410,9 @@ function removeFromCart(productId) {
 
 // your cart page
 
-
-function makeCart() {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const cartContainer = document.getElementById("cart");
-  if (!cartContainer) return;
-
-  cart.forEach(item => {
-
-    const card = document.createElement("article");
-    card.className = "cartCard";
-
-    card.innerHTML = `
-        <img src="${item.image}">
-
-        <div class="cartInfo">
-            <h2>${item.name}</h2>
-            <p>Size: ${item.size}</p>
-            <p>Colour: ${item.style}</p>
-            <p>Quantity: ${item.amt}</p>
-            <p>$${item.price}</p>
-        </div>
-    `;
-
-    cartContainer.append(card);
-});
-};
-
-
 document.addEventListener("DOMContentLoaded", () => {
-
-  makeCart()
+  makeList(productData);
+  makeSection(productStyle);
 });
 
 
