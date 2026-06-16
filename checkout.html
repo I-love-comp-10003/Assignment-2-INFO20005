@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart - truf & co.</title>
-    
-    <link rel="stylesheet" href="style.css">
+    <title>Checkout - truf & co.</title>
+
+     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    
 </head>
 <body>
     <nav class="productPageNav">
@@ -66,24 +65,38 @@
         </div>
     </nav>
 
-    <div class="toPurchase">
-        <h1 style="font-size: 60px;">Your Cart</h1>  
-        <h2>All Items <span class="allItems"></span></h2>
-        <button class="toCheckout"  onclick="window.location.href='checkout.html'">to checkout</button> <br>
-        <button>alternative payment</button>
-    </div>
+    <form>
+        <h2>Delivery Details</h2>
+        <input type="text" id="country" name="country" placeholder="Country/Region" required>
 
-    <aside class="orderSummaryPopup">
-        <details>
-            <summary>Order Summary</summary>
+        <input type="text" id="fName" name="fName" placeholder="First Name" required>
+        <input type="text" id="lName" name="lName" placeholder="Last Name" required>
+
+        <input type="text" id="company" name="company" placeholder="Company (optional)">
+
+        <input type="text" id="address" name="address" placeholder="Address" required>
+
+        <input type="text" id="apartment" name="apartment" placeholder="Apartment, Suite, etc. (optional)">
+
+        <input type="text" id="suburb" name="suburb" placeholder="Suburb" required>
+        <input type="text" id="country" name="country" placeholder="State/Province" required>
+        <input type="text" id="postcode" name="postcode" placeholder="Postcode">
+
+        <h2>Delivery Details</h2>
+        <input type="number" id="card" name="card" placeholder="Card Number">
+
+        <input type="number" id="exp" name="exp" placeholder="Expiration Date (MM/YY)">
+        <input type="number" id="secCode" name="secCode" placeholder="Security Code">
+
+        <input type="text" id="cardName" name="cardName" placeholder="Name on Card">
+    </form>
+
+    <aside class="orderSummaryPopup checkoutSummary">
+            <h1>Order Summary</h1>
             <div id="orderSummary"> </div>
-        </details>
     </aside>
-
-    <main>
-        <div id="cart"></div>
-    </main>
     <script src="products.js"></script>
     <script src="cart.js"></script>
 </body>
+
 </html>

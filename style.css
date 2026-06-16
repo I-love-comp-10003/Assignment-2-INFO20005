@@ -38,10 +38,11 @@ h2 {
 }
 
 
+
                                                                   /* Nav bar */
 
 nav {
-    height: 61px;
+    height: 80px;
     width: 100%;
     display: grid;
     position: fixed;
@@ -266,6 +267,7 @@ nav li{
     background-color: #f9faf0;
     --polka-bg-image:
     radial-gradient(#D7D3C8  10.6%, transparent 5.6%);
+    margin-top: 0;
 }
 #Collections {
     text-align: center;
@@ -391,7 +393,7 @@ nav li{
 
 
 
-#quantity {
+.quantity {
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
     text-align: center;
@@ -400,7 +402,7 @@ nav li{
     border-radius: 5px;
 }
 
-#quantity button{
+.quantity button{
     background: unset; 
     border: 0;
     padding: 2%;
@@ -480,7 +482,7 @@ nav li{
     cursor:pointer;
 }
 .productDetails summary::marker {
-  content: "";
+    content: "";
 }
 
 
@@ -500,9 +502,123 @@ nav li{
 .cartCard {
     text-align: center;
     width: 200px;
+    height: 650px;
     margin: auto;
+    background: rgba(248, 249, 240, 0.50);
+    border: 1px solid #515F59;
+    padding: 10px 40px;
 }
 
-.cartCard #quantity  {
+.cartCard img {
+    min-height: 200px;
+    max-height: 200px;
+    object-fit:cover;
+}
+.cartCard .quantity  {
     margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove button {
+    background-color: transparent;
+    margin: 10px;
+    border: none;
+}
+
+.toPurchase {
+    background: #F8F9F0;
+    margin: auto;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+}
+.toPurchase h2 {
+    margin: 0;
+    font-size: 40px;
+    color: #515F59;
+}
+.toPurchase button {
+    width: 40%;
+    height: 90px;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-top: 25px;
+    color: #4D483C;
+    text-align: center;
+    font-size: 24px;
+}
+.toPurchase .toCheckout {
+    border-width: 0;
+    background-color: #CEC5B5;
+}
+
+
+                                                                  /* order summary */
+.orderSummaryPopup {
+    background-color:#f9faf0;
+    width: 390px;
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    display: flex;
+    padding: 30px 20px;
+    border: #515F59 1px solid;
+}
+.orderSummaryPopup summary{
+    width: 350px;
+    font-size: 30px;
+    border-bottom: 1px solid; color: #515F59;
+}
+@keyframes slideInDown {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.orderSummaryPopup :open {
+    animation: slideInDown .1s ease-out;
+}
+#orderSummary {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+
+.rightText {
+    text-align: right;
+    width: 100px;
+}
+.total {
+    color: #515F59;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
+}
+                                                                  /* Checkout */
+.checkoutSummary {
+    height: 100%;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin: 10% 50px 10% 20%;
+    max-width: 567px;
+    display: flex;
+    flex-direction: column;
 }
