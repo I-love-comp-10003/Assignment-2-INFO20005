@@ -65,31 +65,64 @@
         </div>
     </nav>
 
-    <form>
-        <h2>Delivery Details</h2>
-        <input type="text" id="country" name="country" placeholder="Country/Region" required>
-
-        <input type="text" id="fName" name="fName" placeholder="First Name" required>
-        <input type="text" id="lName" name="lName" placeholder="Last Name" required>
-
-        <input type="text" id="company" name="company" placeholder="Company (optional)">
-
-        <input type="text" id="address" name="address" placeholder="Address" required>
-
-        <input type="text" id="apartment" name="apartment" placeholder="Apartment, Suite, etc. (optional)">
-
-        <input type="text" id="suburb" name="suburb" placeholder="Suburb" required>
-        <input type="text" id="country" name="country" placeholder="State/Province" required>
-        <input type="text" id="postcode" name="postcode" placeholder="Postcode">
-
-        <h2>Delivery Details</h2>
-        <input type="number" id="card" name="card" placeholder="Card Number">
-
-        <input type="number" id="exp" name="exp" placeholder="Expiration Date (MM/YY)">
-        <input type="number" id="secCode" name="secCode" placeholder="Security Code">
-
-        <input type="text" id="cardName" name="cardName" placeholder="Name on Card">
+    <form >
+        <h2>Contact Information</h2>
+        <ul>
+            <li class="row1">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </li>
+            <li class="row1">
+                <input type="number" id="phone" name="phone" placeholder="Phone Number (optional)" oninput="this.value = this.value.replace(/\D/g, '')">
+            </li>
+        </ul>
+        <h2>Delivery</h2>
+        <ul>
+            <li class="row1">
+                <input type="text" id="country" name="country" placeholder="Country/Region" required>
+            </li>
+            <li class="row2">
+                <input type="text" id="fName" name="fName" placeholder="First Name" required><input type="text" id="lName" name="lName" placeholder="Last Name" required>
+            </li>
+            <li class="row1">
+                <input type="text" id="company" name="company" placeholder="Company (optional)">
+            </li>
+            <li class="row1">
+                <input type="text" id="address" name="address" placeholder="Address" required>
+            </li>
+            <li class="row1">
+                <input type="text" id="apartment" name="apartment" placeholder="Apartment, Suite, etc. (optional)">
+            </li>
+            <li class="row3">
+                <input type="text" id="suburb" name="suburb" placeholder="Suburb" required><input type="text" id="country" name="country" placeholder="State/Province" required><input type="text" id="postcode" name="postcode" placeholder="Postcode" required>
+            </li>
+        </ul>
+        <h2>Payment</h2>
+        <ul>
+            <li class="row1">
+                <input type="number" id="card" name="card" placeholder="Card Number" required oninput="this.value = this.value.replace(/\D/g, '')">
+            </li>
+            <li class="row2">
+                <input type="number" id="exp" name="exp" placeholder="Expiration Date (MM/YY)" required oninput="this.value = this.value.replace(/\D/g, '')"><input type="number" id="secCode" name="secCode" placeholder="Security Code" required oninput="this.value = this.value.replace(/\D/g, '')">
+            </li>
+            <li class="row1">
+                <input type="text" id="cardName" name="cardName" placeholder="Name on Card" required>
+            </li>
+        </ul>
+        
+        
     </form>
+<a class="submitB" onclick="payConfirm()">
+           <p>Pay Now</p>
+        </a>
+    <div id="purchaseComplete" class="hidden">
+        <div class="innerpopup white">
+            <h2 style="font-size: 40px; color: #4B634E;">Purchase <br> Completed!</h2>
+            <div class="square"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="26" viewBox="0 0 36 26" fill="none">
+            <path d="M34 2L12 24L2 14" stroke="#4B634E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></div>
+            <button onclick="window.location.href='index.html'"> Back to Home </button>
+        </div>
+    </div>
 
     <aside class="orderSummaryPopup checkoutSummary">
             <h1>Order Summary</h1>

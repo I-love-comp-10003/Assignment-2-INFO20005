@@ -129,6 +129,12 @@ function cartButton(index, change) {
   orderSummary();
 }
 
+function payConfirm() {
+  const popup = document.getElementById('purchaseComplete')
+  popup.className = "visible" 
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   makeCart()
   orderSummary()
