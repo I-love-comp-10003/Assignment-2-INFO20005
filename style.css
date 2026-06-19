@@ -296,7 +296,13 @@ footer input {
 }
 .overlay button{
     margin-top: 2%;
-    padding: .75% 1% .75% 1%;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 1.5% 3%;    
+    background-color: #4B634E;
+    color: #D7D3C8;
+    border: #4D483C 2px solid;
 }
 @media (max-width: 1130px) {
     .hero {
@@ -390,6 +396,10 @@ footer input {
         width: 190px;
         max-height: 262px;
     }
+    #products {
+        padding-top: 10%;
+        padding-bottom: 15%;
+    }
 }
 
 
@@ -445,6 +455,9 @@ footer input {
     --polka-bg-image:
     radial-gradient(#9C9993  10.6%, transparent 5.6%)
 }
+.productPage .wrapper img {
+    height: 500px;
+}
 .whiteBG {
     background-color: #f9faf0;
     --polka-bg-image:
@@ -454,7 +467,7 @@ footer input {
 }
 #Collections {
     text-align: center;
-    padding: 3% 0 15% 0;
+    padding: 3% 0 100px 0;
 }
                                                                   /* Section cards */
 .productType {
@@ -553,7 +566,7 @@ footer input {
 .productInfo {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 2% 4% 0 4%;
+    margin: 2% 4% 15% 4%;
     color: #515F59;
 }
 .productListing {
@@ -736,9 +749,16 @@ footer input {
 }
 
 @media (max-width: 1130px) {
+    .productPage .wrapper, .productPage .wrapper img {
+    max-height: 200px;
+    }
     .productInfo {
         display: flex;
         flex-direction: column;
+        margin-bottom: 10%;
+    }
+    .productDetails {
+        margin-bottom: 15%;
     }
     .productDetails h2{
         font-size: 36px;
@@ -748,6 +768,9 @@ footer input {
     }
     .productPrice span, .tableHeadings th {
         font-size: 20px;
+    }
+    .productListing .wrapper img, .productListing .wrapper {
+        height: 50%;
     }
 
     .tableData span{
