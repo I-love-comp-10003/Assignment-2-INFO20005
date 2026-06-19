@@ -157,10 +157,32 @@ function addToCart(productId) {
     // puts into localstorage
     localStorage.setItem("cart", JSON.stringify(cart));
     console.log(cart)
+
+    // popup notif
+    
+    const popup = document.createElement('div')
+    popup.className ="hidden"
+    popup.id = "popup"
+    popup.innerHTML =`
+    <h2>Added to Cart</h2>
+    <img src="${product.image[0]}">
+    <p> ${product.name} ${color} <br> 
+    Size: ${size} <br> 
+    x${quantity} <br>
+    <button class="submitB" onclick="window.location.href='cart.html'"> View Cart </button>
+    <button onclick="window.location.href='checkout.html'"> To Checkout </button>
+    <a class="badge" onclick="hide('popup')">X</a>
+    `
+    document.body.append(popup)
+    popup.classList.toggle("hidden")
 };
 
 
-
+function hide(name) {
+  const popup = document.getElementById(name)
+  popup.classList.toggle("hidden")
+  document.getElementById("popup")?.remove();
+}
 
 
 function removeFromCart(productId) {

@@ -13,10 +13,10 @@
 <body class="productPage">
     <nav class="productPageNav">
         <ul class="leftAlign">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">Sale</a></li>
-            <li>
-                <div class="dropdown">
+            <li class="desktop"><a href="index.html">Home</a></li>
+            <li class="desktop"><a href="">Sale</a></li>
+            <li class="desktop">
+                <div class="dropdown desktop">
                     <a href="allProducts.html" class="dropbtn">Shop All</a><br>
                     <aside class="dropdownContent">
                             <br><a href="harnessProductListing.html">Harnesses</a> <br><br>
@@ -28,10 +28,12 @@
                             <a href="">Accessories</a><br><br>
                             <a href="">For Hoomans</a><br>
                     </aside>
+
+                    
                 </div>
             </li>
 
-            <li>
+            <li class="desktop">
                 <div class="dropdown">
                     <a class="dropbtn">Collections</a><br>
                     <aside class="dropdownContent">
@@ -48,13 +50,18 @@
                     </aside>
                 </div>    
             </li>
-            <li><a href="">Sizing Guide</a></li>
+            <li class="desktop"><a href="">Sizing Guide</a></li>
+
+            <li><div class="mobile">
+            <a href="index.html"><img src="image/truflogo1Vectorized.png" height="40px"></a>
+            </li>
+        </div>
         </ul>
 
 
 
         <div class="center">
-            <a><img src="image/truflogo1Vectorized.png" height="40px"></a>
+            <a class="desktop" href="index.html"><img src="image/truflogo1Vectorized.png" height="40px"></a>
         </div>
 
 
@@ -62,6 +69,45 @@
             <span><a><img src="image/profile.svg" height="20px"></a></span>
             <span><a href="cart.html"> <img src="image/shoppingBag.svg"height="20px"> </a></span>
             <span><a> <img src="image/search.svg"height="20px"> </a></span>
+            <span class="mobile"><a onclick="hide('hamburger')"> <img src="image/hamburger.svg"height="20px"> </a></span>
+            
+        </div>
+        <div id="hamburger" class="mobile hidden">
+            
+            <ul class="sideBar">
+            <li class="badge"><a onclick="hide('hamburger')">></a></li>
+            <li style="background-color: #D7D3C8;"><a href="index.html">Home</a></li>
+            <li><a href="">Sale</a></li>
+            <li>
+                <details class="dropHamburg">
+                    <summary><a href="allProducts.html" class="">Shop All</a></summary>
+                    
+                            <br><a href="harnessProductListing.html">Harnesses</a> <br><br>
+                            <a href="sweaterProductListing.html">Sweaters & Jumpers</a><br><br>
+                            <a href="">Bandanas</a><br><br>
+                            <a href="">Leashes</a><br><br>
+                            <a href="">Collars</a><br><br>
+                            <a href="">Waste Bag Holders</a><br><br>
+                            <a href="">Accessories</a><br><br>
+                            <a href="">For Hoomans</a><br>
+                </details> </li>
+            <li>
+                <details class="dropHamburg">
+                    <summary><a class="dropbtn">Collections</a></summary>
+                            <br><a href="addictProductListing.html">Addict</a> <br><br>
+                            <a href="">The Frenchie</a><br><br>
+                            <a href="">Blooming</a><br><br>
+                            <a href="">The Dreamers</a><br><br>
+                            <a href="">Cavi</a><br><br>
+                            <a href="">Wanderlust</a><br><br>
+                            <a href="">Lover's Picnic</a><br><br>
+                            <a href="">Joie de Vivre</a><br><br>
+                            <a href="">Edward</a><br><br>
+                            <a href="">Truffle</a><br>
+                </details>    
+            </li>
+            <li><a href="">Sizing Guide</a></li>
+        </ul>
         </div>
     </nav>
     <div class="wrapper">
@@ -79,8 +125,39 @@
         <p>Filters </p>
     </div>
     <main>
-    <div id="products" class="harness" style="height: 100px;"></div>
+    <div id="products" class="harness"></div>
     </main>
+    <footer>
+            <img src="image/logo.png" style="height: 50px;" class="footerLogo desktop">
+        <div class="footerInfo">
+            <div class="footer2">
+                <ul>
+                    <li>About</li>
+                    <li>Contact Us</li>
+                    <li>Shipping Policy</li>
+                    <li>Exchange & Refund Policy</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms Of Service</li>
+                </ul>
+            </div>
+
+            <div class="footer1"> 
+                <h3>Join the truf VIP 🤍</h3> 
+                <p>Very important pup! Join our email list for exclusive offers and the latest news.</p>
+                <input type="email" value="Email">
+            </div>
+            
+            <div class="footer3">
+                <h3>About truf & co.</h1>
+                truf & co. established in December 2021. We are a small business in Australia and based in Melbourne. We aim to bring the most fashionable, extraordinary and luxurious pet accessories for your loved ones.
+                </div>
+        </div>
+        
+        <div class="footerBottom">
+            <span><img src="image/Instagram.png"><img src="image/Group 24.png"></span>
+            <p>© 2026, truf & co.</p>
+        </div>
+    </footer>
 </body>
 <script src="products.js"></script>
 <script src="script.js"></script>
