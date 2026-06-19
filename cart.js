@@ -72,7 +72,7 @@ function makeCart() {
 
     card.innerHTML = `
         <h2 style="font-size: 30px; margin-top: 10px;"> ${(index)+ 1} </h2>
-        <img src="${item.image}" style="width: 200px;">
+        <a href="${item.href}"><img src="${item.image}" style="width: 200px;"></a>
 
         <div class="cartInfo">
             <h2>${item.name}</h2>

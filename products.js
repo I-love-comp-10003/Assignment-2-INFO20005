@@ -91,8 +91,8 @@ const productData = [
   },
   {
     id: "",
-    name: "Half Zip Sweater",
-    image: ["image/halfZipJumper.jpg", "image/halfZipJumper2.webp"],
+    name: "Blooming Harness",
+    image: ["image/blooming3.webp", "image/blooming1.webp"],
     price: 54.95,
     collection: "",
     productType: "harness",
@@ -102,8 +102,8 @@ const productData = [
   },
   {
     id: "",
-    name: "Half Zip Sweater",
-    image: ["image/halfZipJumper.jpg", "image/halfZipJumper2.webp"],
+    name: "The Frenchie Harness",
+    image: ["image/frenchie2.webp", "image/frenchie.webp"],
     price: 54.95,
     collection: "",
     productType: "harness",
@@ -113,13 +113,57 @@ const productData = [
   },
   {
     id: "",
-    name: "Half Zip Sweater",
-    image: ["image/halfZipJumper.jpg", "image/halfZipJumper2.webp"],
+    name: "Cavi Harness",
+    image: ["image/cavi3.webp", "image/cavi2.webp"],
     price: 54.95,
     collection: "",
     productType: "harness",
     sale: true,
     salePrice: 43.96,
+    href: "",
+  },
+  {
+    id: "",
+    name: "Wanderlust Harness",
+    image: ["image/wander3.jpg", "image/wander2.webp"],
+    price: 54.95,
+    collection: "",
+    productType: "harness",
+    sale: false,
+    salePrice: 0,
+    href: "",
+  },
+  {
+    id: "",
+    name: "Joie de Vivre Harness",
+    image: ["image/jdv1.webp", "image/jdv2.webp"],
+    price: 54.95,
+    collection: "",
+    productType: "harness",
+    sale: false,
+    salePrice: 0,
+    href: "",
+  },
+  {
+    id: "",
+    name: "Edward Harness",
+    image: ["image/edward1.jpg", "image/edward2.webp"],
+    price: 54.95,
+    collection: "",
+    productType: "harness",
+    sale: false,
+    salePrice: 0,
+    href: "",
+  },
+  {
+    id: "",
+    name: "Truffle Harness",
+    image: ["image/truffle1.jpg", "image/truffle2.webp"],
+    price: 54.95,
+    collection: "",
+    productType: "harness",
+    sale: false,
+    salePrice: 0,
     href: "",
   },
 ];
@@ -129,110 +173,110 @@ const productData = [
 const productStyle = [
     {
         name: "Harnesses",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/harness.webp", "image/harness.webp"],
         type: "productType",
         href: "harnessProductListing.html"
     },
     {
         name: "Sweaters & Jumpers",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/sweater.jpg", "image/sweater.jpg"],
         type: "productType",
         href: "sweaterProductListing.html"
     },
     {
         name: "Bandanas",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/bandana.webp", "image/bandana.webp"],
         type: "productType",
         href: ""
         
     },
     {
         name: "Leashes",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/leash.jpg", "image/leash.jpg"],
         type: "productType",
         href: ""
     },
     {
         name: "Collars",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/collar.webp", "image/collar.webp"],
         type: "productType",
         href: ""
     },
     {
         name: "Waste Bag Holders",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/wastebag.jpg", "image/wastebag.jpg"],
         type: "productType",
         href: ""
     },
     {
         name: "Accessories",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/accessories.webp", "image/accessories.webp"],
         type: "productType",
         href: ""
     },
     {
         name: "For Hoomans",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/hooman.png", "image/hooman.png"],
         type: "productType",
         href: ""
     },
     {
         name: "Addict",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/addictHarness2.webp", "image/addictHarness.webp"],
         type: "style",
         href: "addictProductListing.html"
     },
     {
         name: "The Frenchie",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/frenchie1.webp", "image/frenchie2.webp"],
         type: "style",
         href: ""
     },
     {
         name: "Blooming",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/blooming1.webp", "image/blooming2.webp"],
         type: "style",
         href: ""
     },
     {
         name: "The Dreamers",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/theDreamers1.jpg", "image/theDreamers2.webp"],
         type: "style",
         href: ""
     },
     {
         name: "Cavi",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/cavi1.webp", "image/cavi2.webp"],
         type: "style",
         href: ""
     },
     {
         name: "Wanderlust",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/wander1.jpg", "image/wander2.webp"],
         type: "style",
         href: ""
     },
     {
         name: "Lovers' Picnic",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/loversPicnic1.webp", "image/loversPicnic2.webp"],
         type: "style",
         href: ""
     },
     {
         name: "Joie de Vivre",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/jdv1.webp", "image/jdv2.webp"],
         type: "style",
         href: ""
     },
     {
         name: "Edward",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/edward1.jpg", "image/edward2.webp"],
         type: "style",
         href: ""
     },
     {
         name: "Truffle  ",
-        image: ["image/harness.webp", "image/addictHarness2.webp"],
+        image: ["image/truffle1.jpg", "image/truffle2.webp"],
         type: "style",
         href: ""
     },

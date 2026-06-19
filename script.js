@@ -151,6 +151,7 @@ function addToCart(productId) {
             price: product.sale 
               ? product.salePrice
               : product.price,
+            href: product.href
         })
         
     
