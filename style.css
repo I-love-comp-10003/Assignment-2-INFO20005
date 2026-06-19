@@ -186,7 +186,7 @@ footer {
     color: #4B634E;
     background-color: #D7D3C8;
     padding: 3% 5% 0;
-    margin-top: 10%;
+    padding: 10%;
 }
 .footerLogo, .footerBottom{
     margin: 2% auto;
@@ -315,6 +315,20 @@ footer input {
 }
 
                                                                   /* Product List Card */
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.suggest {
+    width: 90%;
+    margin: auto;
+    margin-top: 1%;
+    padding: 1% 5% 5% 5% ;
+    background-color: #F8F9F0;
+}
 
 .productCard{
     display: inline-flex;
@@ -332,10 +346,12 @@ footer input {
 }
 .productText {
     z-index: 1;
-    background-color: #D7D3C8;
+    background-color: #F8F9F0;
     padding: 4%;
     padding-bottom: 0;
     height: 64px;
+    color: #4B634E;
+    font-size: 18px;
 }
 .productText p, .productText span{
     margin: 0 2% 0 2%;
@@ -344,6 +360,7 @@ footer input {
 }
 .productText h4 {
     margin: 1%;
+    font-weight: 400;
 }
 .saleBadge {
     background-color: #4B634E;
@@ -364,12 +381,18 @@ footer input {
         width: 190px;
         height: 262px;
         margin-bottom: 19%;
+        
+    }
+    .productText{
+        font-size: 16px;
     }
     .productCard img {
         width: 190px;
         max-height: 262px;
     }
 }
+
+
 
                                                                   /* Headers */
 .wrapper {

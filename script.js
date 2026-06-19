@@ -193,7 +193,7 @@ function removeFromCart(productId) {
     location.reload();
 };
 
-// your cart page
+
 
 document.addEventListener("DOMContentLoaded", () => {
   makeList(productData);
