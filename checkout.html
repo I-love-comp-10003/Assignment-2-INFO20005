@@ -111,7 +111,7 @@
         </div>
     </nav>
 
-    <form >
+    <form id="checkoutForm">
         <h2>Contact Information</h2>
         <ul>
             <li class="row1">
@@ -155,9 +155,7 @@
             </li>
         </ul>
 
-        <a class="submitB" onclick="payConfirm()">
-           <p>Pay Now</p>
-        </a>
+        <input class="submitB" onsubmit="payConfirm();" type="submit"  value="Pay Now">
         
     </form>
 
@@ -171,11 +169,8 @@
         </div>
     </div>
 
-    <aside class="orderSummaryPopup checkoutSummary desktop">
-            <h1>Order Summary</h1>
-            <div id="orderSummary"> </div>
-    </aside>
-    <aside class="orderSummaryPopup checkoutSummary2">
+    
+    <aside id="orderSum" class="orderSummaryPopup">
         <details open>
             <summary>Order Summary</summary>
             <div id="orderSummary"> </div>

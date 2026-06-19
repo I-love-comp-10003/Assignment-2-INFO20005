@@ -129,11 +129,35 @@ function cartButton(index, change) {
   orderSummary();
 }
 
+/* switching styles in checkout*/
+
+function orderSum(x) {
+  const summary = document.getElementById("orderSum")
+  if (x.matches) { 
+    summary.className = "orderSummaryPopup checkoutSummary2";
+  } else {
+    summary.className = "orderSummaryPopup checkoutSummary";
+  }
+}
+const x = window.matchMedia("(max-width: 1200px)")
+orderSum(x);
+
+x.addEventListener('change', function() {
+  orderSum(x);
+}); 
+
+/*payment animation*/
+
 function payConfirm() {
   const popup = document.getElementById('purchaseComplete')
   popup.className = "visible" 
 }
 
+const form = document.getElementById("checkoutForm");
+  form.addEventListener('submit', function(event){
+    event.preventDefault()
+    payConfirm()
+  });
 
 document.addEventListener("DOMContentLoaded", () => {
   makeCart()
