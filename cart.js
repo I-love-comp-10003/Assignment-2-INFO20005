@@ -139,12 +139,6 @@ function orderSum(x) {
     summary.className = "orderSummaryPopup checkoutSummary";
   }
 }
-const x = window.matchMedia("(max-width: 1200px)")
-orderSum(x);
-
-x.addEventListener('change', function() {
-  orderSum(x);
-}); 
 
 /*payment animation*/
 
@@ -153,11 +147,6 @@ function payConfirm() {
   popup.className = "visible" 
 }
 
-const form = document.getElementById("checkoutForm");
-  form.addEventListener('submit', function(event){
-    event.preventDefault()
-    payConfirm()
-  });
 
 document.addEventListener("DOMContentLoaded", () => {
   makeCart()
